@@ -239,6 +239,7 @@ Notes
 
 # License
 
-MIT License
+**MIT License**
+
 ---
 ***Created by [MilzOfficial](https://t.me/milzstore)***
