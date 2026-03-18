@@ -1,7 +1,7 @@
 ### Milz-Official Whatsapp Baileys
 
 <p align="center">
-  <img src="https://top4top.me/4deHa9GJdVrA5Rj" width="300" />
+  <img src="https://raw.githubusercontent.com/milz666/core-vtech/refs/heads/main/file_00000000d9447208b688e28a1cc44733.png" width="700" />
 </p>WhatsApp Baileys Enhanced Core is a refined version of the original Baileys library, designed to provide a more stable, flexible, and developer-friendly experience when building WhatsApp automation systems.
 
 Built on websocket technology without requiring a browser, this library allows direct interaction with WhatsApp services while maintaining performance and efficiency. This version focuses on improving pairing reliability, fixing common connection issues, and extending support for advanced interactive messaging.
