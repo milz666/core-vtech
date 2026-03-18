@@ -1,6 +1,6 @@
 {
   "name": "@milz-engine/baileys",
-  "version": "8.0.0",
+  "version": "7.1.0",
   "description": "WhatsApp API Modification By Milz Official",
   "keywords": [
     "whatsapp",
@@ -105,6 +105,6 @@
     },
     "packageManager": "yarn@1.22.19",
     "engines": {
-        "node": ">=23.0.0"
+        "node": ">=20.0.0"
     }
 }
