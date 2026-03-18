@@ -1,230 +1,216 @@
-⚡ NEURO CORE — WHATSAPP ENGINE
+WhatsApp Baileys (Enhanced Core)
 
 <p align="center">
-  <img src="https://i.imgur.com/Z6X9X9R.gif" width="300"/>
-</p>«“Engineered for control. Built for dominance.”»
+  <img src="https://g.top4top.io/p_3676rfdq11.jpg" width="300" />
+</p>WhatsApp Baileys Enhanced Core is a refined version of the original Baileys library, designed to provide a more stable, flexible, and developer-friendly experience when building WhatsApp automation systems.
+
+Built on websocket technology without requiring a browser, this library allows direct interaction with WhatsApp services while maintaining performance and efficiency. This version focuses on improving pairing reliability, fixing common connection issues, and extending support for advanced interactive messaging.
+
+It is suitable for developers building bots, automation systems, customer service tools, or any real-time communication platform that requires stability and control.
 
 ---
 
-✦ OVERVIEW
+Main Features
 
-Neuro Core is a refined WhatsApp engine powered by Baileys — optimized for speed, precision, and stability.
-
-Built using direct websocket communication without browser dependency, this system provides full control over automation, messaging flow, and interaction systems.
-
----
-
-⚙️ CORE FEATURES
-
-- Custom pairing system with improved stability
-- Fixed authentication & reconnect issues
-- Interactive messages, buttons & native flow support
-- Efficient session management system
-- Multi-device WhatsApp support
-- Lightweight and modular architecture
-- Suitable for bots, automation, and advanced communication systems
+- Improved pairing system with better stability
+- Fixes common authentication and reconnect issues
+- Supports interactive messages, buttons, and native flow
+- Efficient session management for long-running systems
+- Compatible with latest WhatsApp multi-device features
+- Lightweight and modular structure
+- Easy integration into existing Node.js applications
 
 ---
 
-🚀 GETTING STARTED
+Getting Started
 
-Begin by installing dependencies and running the engine:
+Install dependencies and run the project:
 
 npm install
 npm run build
 npm start
 
-Minimal setup — maximum control.
-
 ---
 
-🧠 CORE FUNCTIONS
+Basic Functions
 
-Check ID Channel
-
-Get channel ID from URL
+Get Channel ID
 
 await sock.newsletterId(url)
 
-Check Banned Number
+---
 
-Check WhatsApp number status
+Check WhatsApp Number
 
 await sock.checkWhatsApp(target)
 
 ---
 
-📡 SEND MESSAGE DOCUMENTATION
+Send Message Examples
 
-Status Group Message V2
-
+Status Group Message
+```javascript
 await sock.sendMessage(target, {
   groupStatusMessage: {
-    text: "Neuro System Active"
+    text: "Hello World"
   }
 });
-
+```
 ---
 
-Album Message (Multiple Images)
-
-await sock.sendMessage(target, { 
+Album Message
+```javascript
+await sock.sendMessage(target, {
   albumMessage: [
-    { image: img1, caption: "Frame 1" },
-    { image: { url: "URL IMAGE" }, caption: "Frame 2" }
-  ] 
+    { image: image1, caption: "First image" },
+    { image: { url: "URL" }, caption: "Second image" }
+  ]
 }, { quoted: m });
-
+```
 ---
-
+```javascript
 Event Message
 
-await sock.sendMessage(target, { 
-  eventMessage: { 
+await sock.sendMessage(target, {
+  eventMessage: {
     isCanceled: false,
-    name: "Neuro Event",
-    description: "Execution Layer",
+    name: "Hello World",
+    description: "Event description",
     location: {
       degreesLatitude: 0,
       degreesLongitude: 0,
-      name: "Neuro Node"
+      name: "Location"
     },
     joinLink: "https://call.whatsapp.com/",
     startTime: "1763019000",
     endTime: "1763026200",
     extraGuestsAllowed: false
-  } 
+  }
 }, { quoted: m });
-
+```
 ---
-
+```javascript
 Poll Result Message
 
-await sock.sendMessage(target, { 
-  pollResultMessage: { 
-    name: "System Vote",
+await sock.sendMessage(target, {
+  pollResultMessage: {
+    name: "Poll Example",
     pollVotes: [
       {
-        optionName: "YES",
-        optionVoteCount: "999"
+        optionName: "Option 1",
+        optionVoteCount: "100"
       },
       {
-        optionName: "NO",
-        optionVoteCount: "1"
+        optionName: "Option 2",
+        optionVoteCount: "50"
       }
-    ] 
-  } 
+    ]
+  }
 }, { quoted: m });
-
+```
 ---
 
-🧩 INTERACTIVE MESSAGE
-
+Interactive Messages
+```javascript
 Simple Interactive Message
 
 await sock.sendMessage(target, {
   interactiveMessage: {
-    header: "Neuro Core",
-    title: "System Access",
-    footer: "milz666",
+    header: "Hello World",
+    title: "Hello World",
+    footer: "powered by milz666",
     buttons: [
       {
         name: "cta_copy",
         buttonParamsJson: JSON.stringify({
-          display_text: "COPY CODE",
-          id: "NEURO-001",
-          copy_code: "ACTIVE"
+          display_text: "Copy Code",
+          id: "123456",
+          copy_code: "ABC123XYZ"
         })
       }
     ]
   }
 }, { quoted: m });
-
+```
 ---
 
 Interactive Message with Native Flow
-
-await sock.sendMessage(target, {    
-  interactiveMessage: {      
-    header: "Neuro Core",
-    title: "Flow Control",
-    footer: "milz666",
+```javascript
+await sock.sendMessage(target, {
+  interactiveMessage: {
+    header: "Hello World",
+    title: "Hello World",
+    footer: "MilzOfficial",
     image: { url: "https://example.com/image.jpg" },
-    nativeFlowMessage: {        
+    nativeFlowMessage: {
       messageParamsJson: JSON.stringify({
         limited_time_offer: {
-          text: "Unlock System",
+          text: "Example",
           url: "https://example.com",
-          copy_code: "NEURO",
+          copy_code: "CODE",
           expiration_time: Date.now() * 999
-        },
-        bottom_sheet: {
-          in_thread_buttons_limit: 2,
-          divider_indices: [1,2,3],
-          list_title: "Neuro Menu",
-          button_title: "Execute"
         }
       }),
       buttons: [
         {
           name: "cta_copy",
           buttonParamsJson: JSON.stringify({
-            display_text: "COPY",
-            id: "NEURO",
-            copy_code: "ACTIVE"
+            display_text: "Copy Code",
+            id: "123456",
+            copy_code: "ABC123XYZ"
           })
         }
       ]
-    }      
-  }  
+    }
+  }
 }, { quoted: m });
-
+```
 ---
 
 Interactive Message with Thumbnail
-
+```javascript
 await sock.sendMessage(target, {
   interactiveMessage: {
-    header: "Neuro Core",
-    title: "System UI",
+    header: "Hello World",
+    title: "Hello World",
     footer: "milz666",
     image: { url: "https://example.com/image.jpg" },
     buttons: [
       {
         name: "cta_copy",
         buttonParamsJson: JSON.stringify({
-          display_text: "COPY",
+          display_text: "Copy Code",
           id: "123456",
-          copy_code: "ACTIVE"
+          copy_code: "ABC123XYZ"
         })
       }
     ]
   }
 }, { quoted: m });
-
+```
 ---
 
-🧬 ADVANCED FEATURES
+Advanced Features
 
 Product Message
-
+```javascript
 await sock.sendMessage(target, {
   productMessage: {
-    title: "Neuro Product",
-    description: "Advanced System Module",
+    title: "Product Example",
+    description: "Product description",
     thumbnail: { url: "https://example.com/image.jpg" },
-    productId: "NEURO001",
-    retailerId: "CORE001",
+    productId: "PROD001",
+    retailerId: "RETAIL001",
     url: "https://example.com",
     priceAmount1000: 50000,
     currencyCode: "USD"
   }
 }, { quoted: m });
-
+```
 ---
 
 Request Payment Message
-
+```javascript
 await sock.sendMessage(target, {
   requestPaymentMessage: {
     currency: "USD",
@@ -232,28 +218,25 @@ await sock.sendMessage(target, {
     from: m.sender
   }
 }, { quoted: m });
+```
+---
+
+Why This Version?
+
+This version focuses on stability, cleaner implementation, and better developer experience compared to the default version.
+
+It is designed for real-world usage where reliability and maintainability matter.
 
 ---
 
-⚠️ WARNING
+Notes
 
-Use this system responsibly.
-Improper usage may result in restrictions from WhatsApp.
-
----
-
-✦ WHY NEURO CORE
-
-Because this is not just another library.
-
-This is:
-
-- control over system behavior
-- precision in message execution
-- stability for long-running automation
+- Make sure to handle session storage properly
+- Always test features in a controlled environment
+- Keep dependencies up to date
 
 ---
 
-⚡ FINAL
+License
 
-«“Control the flow. Break the limits.”»
+MIT License
