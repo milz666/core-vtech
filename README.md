@@ -1,4 +1,4 @@
-## Milz Official Whatsapp Baileys
+### Milz-Official Whatsapp Baileys
 
 <p align="center">
   <img src="https://g.top4top.io/p_3676rfdq11.jpg" width="300" />
@@ -22,7 +22,7 @@ Main Features
 ```
 ---
 
-Getting Started
+**Getting Started**
 
 Install dependencies and run the project:
 ```shell
@@ -237,8 +237,8 @@ Notes
 
 ---
 
-License
+# License
 
 MIT License
-
+---
 ***Created by [MilzOfficial](https://t.me/milzstore)***
