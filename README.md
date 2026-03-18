@@ -1,4 +1,4 @@
-WhatsApp Baileys (Enhanced Core)
+## Milz Official Whatsapp Baileys
 
 <p align="center">
   <img src="https://g.top4top.io/p_3676rfdq11.jpg" width="300" />
@@ -9,7 +9,7 @@ Built on websocket technology without requiring a browser, this library allows d
 It is suitable for developers building bots, automation systems, customer service tools, or any real-time communication platform that requires stability and control.
 
 ---
-
+```
 Main Features
 
 - Improved pairing system with better stability
@@ -19,36 +19,36 @@ Main Features
 - Compatible with latest WhatsApp multi-device features
 - Lightweight and modular structure
 - Easy integration into existing Node.js applications
-
+```
 ---
 
 Getting Started
 
 Install dependencies and run the project:
-
+```shell
 npm install
 npm run build
 npm start
-
+```
 ---
 
-Basic Functions
+# Basic Functions
 
-Get Channel ID
-
+**Get Channel ID**
+```javascript
 await sock.newsletterId(url)
-
+```
 ---
 
-Check WhatsApp Number
-
+**Check WhatsApp Number**
+```javascript
 await sock.checkWhatsApp(target)
-
+```
 ---
 
-Send Message Examples
+# Send Message Examples
 
-Status Group Message
+**Status Group Message**
 ```javascript
 await sock.sendMessage(target, {
   groupStatusMessage: {
@@ -58,7 +58,7 @@ await sock.sendMessage(target, {
 ```
 ---
 
-Album Message
+**Album Message**
 ```javascript
 await sock.sendMessage(target, {
   albumMessage: [
@@ -68,9 +68,9 @@ await sock.sendMessage(target, {
 }, { quoted: m });
 ```
 ---
-```javascript
-Event Message
 
+**Event Message**
+```javascript
 await sock.sendMessage(target, {
   eventMessage: {
     isCanceled: false,
@@ -89,9 +89,9 @@ await sock.sendMessage(target, {
 }, { quoted: m });
 ```
 ---
-```javascript
-Poll Result Message
 
+**Poll Result Message**
+```javascript
 await sock.sendMessage(target, {
   pollResultMessage: {
     name: "Poll Example",
@@ -134,7 +134,7 @@ await sock.sendMessage(target, {
 ```
 ---
 
-Interactive Message with Native Flow
+**Interactive Message with Native Flow**
 ```javascript
 await sock.sendMessage(target, {
   interactiveMessage: {
@@ -167,7 +167,7 @@ await sock.sendMessage(target, {
 ```
 ---
 
-Interactive Message with Thumbnail
+**Interactive Message with Thumbnail**
 ```javascript
 await sock.sendMessage(target, {
   interactiveMessage: {
@@ -190,9 +190,9 @@ await sock.sendMessage(target, {
 ```
 ---
 
-Advanced Features
+# Advanced Features
 
-Product Message
+**Product Message**
 ```javascript
 await sock.sendMessage(target, {
   productMessage: {
@@ -209,7 +209,7 @@ await sock.sendMessage(target, {
 ```
 ---
 
-Request Payment Message
+**Request Payment Message**
 ```javascript
 await sock.sendMessage(target, {
   requestPaymentMessage: {
@@ -221,9 +221,9 @@ await sock.sendMessage(target, {
 ```
 ---
 
-Why This Version?
+**Why This Version?**
 
-This version focuses on stability, cleaner implementation, and better developer experience compared to the default version.
+> This version focuses on stability, cleaner implementation, and better developer experience compared to the default version.
 
 It is designed for real-world usage where reliability and maintainability matter.
 
@@ -240,3 +240,5 @@ Notes
 License
 
 MIT License
+
+***Created by [MilzOfficial](https://t.me/milzstore)***
